@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import SingUpComponent from "./components/SingupComponent/SingUpComponent";
 function App() {
   return (
-   <p>Messenger app</p>
+   <SingUpComponent/>
   );
 }
 

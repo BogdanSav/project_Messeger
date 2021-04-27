@@ -9,7 +9,7 @@ export function* sagaWatcher(){
 function* signUp(){
     const data = select(state=>state.signUp);
     try {
-       const response: PromiseFulfilledResult<object> = yield  fetch(url,{
+       const response: PromiseFulfilledResult<any> = yield  fetch(url,{
             method : "POST",
             headers :{
                 'Content-Type': 'application/json'

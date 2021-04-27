@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b13adf-2db7-46ff-9a29-84e2c29d320a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/signUpSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/singupReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/singupReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/saga/sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/sagas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,8 @@
       <workItem from="1619380430523" duration="6975000" />
       <workItem from="1619460804114" duration="50000" />
       <workItem from="1619529437063" duration="3147000" />
-      <workItem from="1619542967540" duration="4049000" />
+      <workItem from="1619542967540" duration="5381000" />
+      <workItem from="1619554152566" duration="1687000" />
     </task>
     <servers />
   </component>

@@ -3,17 +3,18 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
 import {FormControl, Input, InputLabel, Button} from "@material-ui/core";
-import {SIGNUP_DATA} from "../../redux/actions/actions";
+import {SIGNUP_ACTION, SIGNUP_DATA} from "../../redux/actions/actions";
 import {useDispatch} from "react-redux";
 
 
-const SingUpComponent = () => {
+const SingUpComponent: React.FC = () => {
     const dispatch = useDispatch();
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const onSubmit=()=>{
         dispatch({type:SIGNUP_DATA,payload:{name,email,password}});
+        dispatch({type: SIGNUP_ACTION});
     }
     return (
         <Container maxWidth={"md"}>

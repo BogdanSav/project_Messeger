@@ -10,11 +10,12 @@ const initialState = {};
 function singupReducer(state = initialState, action: IAction) {
     switch (action.type) {
         case SIGNUP_DATA:
-            console.log(`type ${action.type}`);
+            console.log(`${action.payload}`);
             return Object.assign(state, action.payload);
         default:
             return state;
     }
+
 }
 
 export default singupReducer;

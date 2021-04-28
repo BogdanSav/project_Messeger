@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {BaseSyntheticEvent, useCallback, useState} from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
@@ -12,7 +12,8 @@ const SingUpComponent: React.FC = () => {
     const [name,setName] = useState<string>("");
     const [email,setEmail] = useState<string>("");
     const [password,setPassword] = useState<string>("");
-    const onSubmit=()=>{
+    const onSubmit=(e:BaseSyntheticEvent)=>{
+        e.preventDefault();
         dispatch({type:SIGNUP_DATA,payload:{name,email,password}});
         dispatch({type: SIGNUP_ACTION});
     }

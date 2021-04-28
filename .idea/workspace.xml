@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="50b13adf-2db7-46ff-9a29-84e2c29d320a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/singupReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/singupReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/saga/sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/sagas.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,12 @@
       <workItem from="1619460804114" duration="50000" />
       <workItem from="1619529437063" duration="3147000" />
       <workItem from="1619542967540" duration="5381000" />
-      <workItem from="1619554152566" duration="1687000" />
+      <workItem from="1619554152566" duration="2226000" />
+      <workItem from="1619592315223" duration="154000" />
+      <workItem from="1619612386650" duration="623000" />
+      <workItem from="1619616212071" duration="62000" />
+      <workItem from="1619627915162" duration="2125000" />
+      <workItem from="1619630196846" duration="58000" />
     </task>
     <servers />
   </component>

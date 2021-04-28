@@ -1,7 +1,7 @@
 import {select,takeLeading} from "redux-saga/effects";
 import {SIGNUP_ACTION} from "../actions/actions";
 
-const url : string = "https://webhook.site/4fc1bb75-f7ae-4dd6-9f46-2f002aa83466";
+const url : string = "/signup";
 export function* sagaWatcher(){
     yield takeLeading(SIGNUP_ACTION,signUp);
 }

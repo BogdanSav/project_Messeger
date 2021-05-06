@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b13adf-2db7-46ff-9a29-84e2c29d320a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/SingupComponent/useSignUpData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/sagas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,9 @@
       <workItem from="1619612386650" duration="623000" />
       <workItem from="1619616212071" duration="62000" />
       <workItem from="1619627915162" duration="2125000" />
-      <workItem from="1619630196846" duration="437000" />
+      <workItem from="1619630196846" duration="487000" />
+      <workItem from="1619701753268" duration="25000" />
+      <workItem from="1620329641561" duration="3036000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,7 @@ import useSignUpData from "./useSignUpData";
 const SingUpComponent: React.FC = () => {
 
     const [name,changeName,email,changeEmail,password,changePassword,onSubmit,popupState,popupSetState]:any = useSignUpData();
-    const anchorElRef= useRef();
+    const anchorElRef= useRef<HTMLBaseElement>();
     return (
         <Container maxWidth={"md"}>
             <form onSubmit={onSubmit}>

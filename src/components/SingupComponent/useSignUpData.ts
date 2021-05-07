@@ -11,7 +11,6 @@ const useSignUpData =()=>{
   const onSubmit=(e:BaseSyntheticEvent)=>{
     e.preventDefault();
     if(passwordRule.test(password)){
-      setPopupState(false);
       dispatch({type:SIGNUP_DATA,payload:{name,email,password}});
       dispatch({type: SIGNUP_ACTION});
       setName("");

@@ -1,10 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import {BrowserRouter as Router,Switch, Route , Redirect} from "react-router-dom";
+import SingUpComponent from "./components/SingupComponent/SingUpComponent";
+const App: React.FC =()=> {
   return (
-   <p>Messenger app</p>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/signup" />
+          </Route>
+          <Route path="/signup">
+            <SingUpComponent/>
+          </Route>
+        </Switch>
+      </Router>
+
   );
 }
 

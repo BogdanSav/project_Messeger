@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b13adf-2db7-46ff-9a29-84e2c29d320a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/ForgotPassword/ForgotPassword.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ForgotPassword/ForgotPassword.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SingupComponent/useSignUpData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingupComponent/useSignUpData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +64,8 @@
       <workItem from="1619701753268" duration="25000" />
       <workItem from="1620329641561" duration="4930000" />
       <workItem from="1620399380792" duration="754000" />
+      <workItem from="1620734152871" duration="481000" />
+      <workItem from="1620754979414" duration="341000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,6 @@ import { ForgotPassword } from './components/index'
 function App() {
   return (
     <>
-      <p>Messenger app</p>
       <ForgotPassword/>
     </>
   );

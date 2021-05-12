@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
 import {FormControl, Button} from "@material-ui/core";
 //imports all components
-import {EmailField, ResetCodeField, NewPassFields} from "../index";
+import {EmailField, ResetCodeField, NewPassFields} from "../../index";
 
 export default function ForgotPassword() {
   console.log("forgot password component ready!");

@@ -10,7 +10,7 @@ import {EmailField, ResetCodeField, NewPassFields} from "../../index";
 export default function ForgotPassword() {
   console.log("forgot password component ready!");
   const [page, setPage] = useState("firstPage"); //number of current step page
-  const [pageNum, setPageNum] = useState("Step 1");
+  const [pageNum, setPageNum] = useState(1);
   const [inputElement, setInputElement] = useState(<EmailField />);
 
 
@@ -22,12 +22,12 @@ export default function ForgotPassword() {
     if (page === "firstPage"){
       setInputElement(<ResetCodeField />);
       setPage("secondPage");
-      setPageNum("Step 2");
+      setPageNum(2);
       console.log("secondPage showing")
     } else if (page === "secondPage") {
       setInputElement(<NewPassFields />);
       setPage("thirdPage");
-      setPageNum("Step 3");
+      setPageNum(3);
       console.log("thirdPage showing")
     } else if (page === "thirdPage") {
       window.location.reload()
@@ -44,7 +44,7 @@ export default function ForgotPassword() {
               <Typography variant="subtitle1" align="center"> We will send an email with a password reset confirmation code </Typography>
             </Grid>
             <Grid item className={"grid-page-status"}>
-              <span className={"pages-tatus-bar"}>{pageNum}</span>
+              <span className={"page-status-bar"}>Step {pageNum}</span>
             </Grid>
             <Grid item>
               <FormControl>

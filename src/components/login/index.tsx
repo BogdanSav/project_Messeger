@@ -9,7 +9,7 @@ export default function LoginComponent () {
       <Formik
         initialValues={{ email: '', password: '' }}
         validate={values => {
-          const errors = {}
+          const errors = {email:""}
           if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
           ) {
@@ -38,7 +38,7 @@ export default function LoginComponent () {
             <button className='myButtonLog'>Registration</button>
             {/* </Link> */}
             {/* <Link to='/forgotPassword'> */}
-            <a>Forgot password?</a>
+            <a href="/forgot-password">Forgot password?</a>
             {/* </Link> */}
           </Form>
         )}

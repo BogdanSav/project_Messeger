@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter as Router,Switch, Route , Redirect} from "react-router-dom";
 import {SingUpComponent} from "./components";
 import {ForgotPassword} from "./components";
-import {LoginComponent} from './components';
+import {AnotherLogin} from './components';
 
 const App: React.FC =()=> {
   return (
@@ -16,7 +16,7 @@ const App: React.FC =()=> {
             <SingUpComponent/>
           </Route>
           <Route path="/login">
-              <LoginComponent/>
+              <AnotherLogin/>
           </Route>
           <Route path="/forgot-password">
             <ForgotPassword/>

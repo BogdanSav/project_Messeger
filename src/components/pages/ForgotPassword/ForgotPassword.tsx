@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-// import styles from "./ForgotPassword.module.scss"; // need to install "npm i react-css-modules"
+import styles from "./ForgotPassword.module.css"; // need to install "npm i react-css-modules"
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
@@ -43,13 +43,10 @@ export default function ForgotPassword() {
               <Typography variant="h3" align="center"> Restore password </Typography>
               <Typography variant="subtitle1" align="center"> We will send an email with a password reset confirmation code </Typography>
             </Grid>
-            <Grid item className={"grid-page-status"}>
-              <span className={"page-status-bar"}>Step {pageNum}</span>
-            </Grid>
             <Grid item>
-              <FormControl>
-                {inputElement}
-              </FormControl>
+              <p className={styles.pageStatusBar}>Step {pageNum}</p>
+              <br/>
+              {inputElement} {/*rendering input field*/}
             </Grid>
             <Grid item>
               <Button

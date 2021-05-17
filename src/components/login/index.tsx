@@ -24,6 +24,7 @@ export default function LoginComponent () {
           }, 400)
         }}
       >
+      
         {({ isSubmitting }) => (
           <Form className='login-form'>
             <h1 id='login'>Login</h1>

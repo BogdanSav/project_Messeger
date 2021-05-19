@@ -3,10 +3,18 @@ import {LOGIN, SIGNUP_ACTION} from "../actions/actions";
 
 const urlSignup : string = "/signup";
 const urlSignin: string = "/signin";
+const setToken = (token :string) =>{
+    document.cookie = token;
+}
+const getToken = () =>{
+    const token = document.cookie;
+    return token;
+}
 export function* sagaWatcher(){
     yield takeLeading(SIGNUP_ACTION,signUp);
     yield takeLeading(LOGIN,signIn);
 }
+
 
 function* signUp(){
     const data:object = yield select(state=>state.signup);

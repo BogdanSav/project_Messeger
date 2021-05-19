@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Switch, Route , Redirect} from "react-router-dom
 import {SingUpComponent} from "./components";
 import {ForgotPassword} from "./components";
 import {AnotherLogin} from './components';
+import {MainComponent} from './components';
 
 const App: React.FC =()=> {
   return (
@@ -20,6 +21,9 @@ const App: React.FC =()=> {
           </Route>
           <Route path="/forgot-password">
             <ForgotPassword/>
+          </Route>
+          <Route path="/main">
+              <MainComponent/>
           </Route>
         </Switch>
       </Router>

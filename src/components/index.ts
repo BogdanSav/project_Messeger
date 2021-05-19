@@ -5,6 +5,7 @@ import NewPassFields from "./Common/FieldsResetPass/NewPassFields"
 import SingUpComponent from "./SingupComponent/SingUpComponent"
 import LoginComponent from './login/index';
 import AnotherLogin from './anotherLogin/AnotherLoginComponent';
+import MainComponent from './MainComponent/MainComponent'
 
 export {
   ForgotPassword,
@@ -13,6 +14,7 @@ export {
   NewPassFields,
   SingUpComponent,
   LoginComponent,
-  AnotherLogin
+  AnotherLogin,
+  MainComponent
 
 }

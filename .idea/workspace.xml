@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a7cbbb0-f921-4277-959e-a0154c6a1ec9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/FieldsResetPass/EmailField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/FieldsResetPass/EmailField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/FieldsResetPass/NewPassFields.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/FieldsResetPass/NewPassFields.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/FieldsResetPass/ResetCodeField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/FieldsResetPass/ResetCodeField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -24,24 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#138#180#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="220">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -49,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Common/FieldsResetPass/EmailField.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="-7">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -58,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Common/FieldsResetPass/NewPassFields.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+            <state relative-caret-position="-7">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -80,6 +62,7 @@
       <find>style-loader</find>
       <find>darwin</find>
       <find>fsevents</find>
+      <find>email</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -90,14 +73,16 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/Common/FieldsResetPass/ResetCodeField.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Common/FieldsResetPass/EmailField.tsx" />
         <option value="$PROJECT_DIR$/src/components/pages/ForgotPassword/Pass.module.css" />
         <option value="$PROJECT_DIR$/node_modules/fsevents/package.json" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx" />
         <option value="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.module.css" />
+        <option value="$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Common/Child.tsx" />
         <option value="$PROJECT_DIR$/src/components/Common/FieldsResetPass/NewPassFields.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Common/FieldsResetPass/EmailField.tsx" />
+        <option value="$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx" />
       </list>
     </option>
   </component>
@@ -105,8 +90,8 @@
     <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-389" />
-    <option name="y" value="-15" />
+    <option name="x" value="429" />
+    <option name="y" value="-273" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -194,7 +179,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="E:\Programming\PhpStorm project base\01React-apps\project_Messegner\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -249,23 +234,31 @@
       <workItem from="1621198485324" duration="590000" />
       <workItem from="1621255278125" duration="11090000" />
       <workItem from="1621286627106" duration="6243000" />
+      <workItem from="1621293127599" duration="394000" />
+      <workItem from="1621327982108" duration="682000" />
+      <workItem from="1621427581404" duration="15496000" />
+      <workItem from="1621517215808" duration="9413000" />
+      <workItem from="1621583872136" duration="734000" />
+      <workItem from="1621585706294" duration="597000" />
+      <workItem from="1621595462764" duration="13722000" />
+      <workItem from="1621617456425" duration="3731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24824000" />
+    <option name="totallyTimeSpent" value="69593000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-260" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27836612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15671642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info anchor="bottom" x="1371" y="647" width="535" height="165" id="Run" order="2" type="FLOATING" weight="0.25603864" />
+      <window_info anchor="bottom" x="1366" y="604" width="558" height="165" id="Run" order="2" type="FLOATING" weight="0.25603864" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -281,6 +274,29 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.295764" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" x="1366" y="604" width="535" height="165" id="Run" order="2" type="FLOATING" visible="true" weight="0.25603864" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" x="7" y="76" width="1322" height="434" id="Terminal" order="12" weight="0.32850242" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -378,26 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SingupComponent/useSignUpData.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/sass-loader/dist/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1520">
@@ -426,20 +422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/Pass.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="19776" column="13" lean-forward="true" selection-start-line="19776" selection-start-column="13" selection-end-line="19776" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/Pass.module.css" />
     <entry file="file://$PROJECT_DIR$/src/components/Common/FieldsResetPass/ResetCodeField.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -459,39 +442,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.module.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="200">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="533">
+          <caret line="19776" column="13" selection-start-line="19776" selection-start-column="13" selection-end-line="19776" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SingupComponent/useSignUpData.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SingupComponent/SingUpComponent.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Child.tsx" />
+    <entry file="file://$PROJECT_DIR$/src/components/Common/FieldsResetPass/NewPassFields.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#138#180#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Common/FieldsResetPass/EmailField.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state relative-caret-position="-7">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Common/FieldsResetPass/NewPassFields.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/ForgotPassword/ForgotPassword.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

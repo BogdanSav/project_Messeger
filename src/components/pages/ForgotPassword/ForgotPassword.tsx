@@ -14,7 +14,7 @@ export default function ForgotPassword() {
   const [inputElement, setInputElement] = useState(<EmailField />);
 
 
-  function handleSubmit(event: any) {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     console.log("form submitted");
 
@@ -32,7 +32,7 @@ export default function ForgotPassword() {
     } else if (page === "thirdPage") {
       window.location.reload()
     }
-  }
+  };
 
   return (
     <>

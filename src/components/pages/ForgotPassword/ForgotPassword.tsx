@@ -1,86 +1,40 @@
-import React, {BaseSyntheticEvent, useState} from "react";
+import React from "react";
 import styles from "./ForgotPassword.module.css"; // need to install "npm i react-css-modules"
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
-import {FormControl, Button} from "@material-ui/core";
+import {Button} from "@material-ui/core";
 //imports all components
+import useForgotPasswordData from "./useForgotPasswordData";
 import {EmailField, ResetCodeField, NewPassFields} from "../../index";
 
 export default function ForgotPassword() {
   console.log("forgot password component ready!");
-  const [page, setPage] = useState("firstPage"); //number of current step page
-  const [pageNum, setPageNum] = useState(1);
-  // const [inputElement, setInputElement] = useState(<EmailField />);
+  const [pageNum,handlePageNum,email,handleEmail,resetCode,handleResetCode,password,handlePassword,
+    repeatPassword,handleRepeatPassword,onSubmit,popupState,setPopupState]: any = useForgotPasswordData();
 
-
-  // create states which we changes in child components
-  const [email,setEmail] = useState<string>("");
-  const [resetCode,setResetCode] = useState<string>("");
-  const [password,setPassword] = useState("");
-  const [repeatPassword,setRepeatPassword] = useState("");
-
-  // handlers for change states in child components
-  const handleEmail = (e: React.BaseSyntheticEvent) => {
-    setEmail(e.target.value);
-  };
-  const handleResetCode = (e: React.BaseSyntheticEvent) => {
-    setResetCode(e.target.value);
-  };
-  const handlePassword = (e: React.BaseSyntheticEvent) => {
-    setPassword(e.target.value);
-  };
-  const handleRepeatPassword = (e: BaseSyntheticEvent) => {
-    setRepeatPassword(e.target.value);
-  };
-
-
+  //changing component with input which showing right now
   let inputElement;
-  if (page === "firstPage") {
+  if (pageNum === 1) {
     inputElement = <EmailField email={email} onChange={handleEmail}/>
-  } else if (page === "secondPage") {
+  } else if (pageNum === 2) {
     inputElement = <ResetCodeField resetCode={resetCode} onChange={handleResetCode}/>
-  } else if (page === "thirdPage") {
+  } else if (pageNum === 3) {
     inputElement =
       <NewPassFields
         password={password}
         onChangePass={handlePassword}
         repeatPassword={repeatPassword}
         onChangeRepeatPass={handleRepeatPassword}
+        popupState={popupState}
+        onPopupChange={setPopupState}
       />
   }
-
-
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    console.log("form submitted");
-
-    //changing content when form submitted successfully
-    if (page === "firstPage"){
-      // setInputElement(<ResetCodeField />);
-      setPage("secondPage");
-      setPageNum(2);
-      console.log("secondPage showing")
-    } else if (page === "secondPage") {
-      // setInputElement(<NewPassFields />);
-      setPage("thirdPage");
-      setPageNum(3);
-      console.log("thirdPage showing")
-    } else if (page === "thirdPage") {
-      if (password !== repeatPassword) {
-        alert("passwords isn't same");
-        setPassword("");
-        setRepeatPassword("");
-        return
-      }
-      window.location.reload()
-    }
-  };
 
   return (
     <>
       <Container maxWidth={"md"}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onSubmit}>
           <Grid container direction="column" justify="space-around" alignItems="center"  spacing={4}  >
             <Grid item>
               <Typography variant="h3" align="center"> Restore password </Typography>

@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import {FormControl, Input, InputLabel} from "@material-ui/core";
 
 export default function EmailField(props: any) {
-
   // function handleChange(e: any) {
   //   props.onChange(e.target.value);
   // }

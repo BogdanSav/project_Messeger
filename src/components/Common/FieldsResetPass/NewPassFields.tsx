@@ -1,13 +1,12 @@
-import React, {useState} from "react";
-import {FormControl, Input, InputLabel} from "@material-ui/core";
+import React, {useRef} from "react";
+import {FormControl, Input, InputLabel, Popover} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 
 
 export default function NewPassFields(props: any) {
-
-
-  // if (password != repeatPassword) {
-  //   console.log("Password mismatch: " + password + " / " + repeatPassword)
+  const anchorElRef = useRef<HTMLBaseElement>();
+  // if (props.password !== props.repeatPassword) {
+  //   console.log("Password mismatch: " + props.password + " / " + props.repeatPassword)
   // }
 
   return (
@@ -26,7 +25,9 @@ export default function NewPassFields(props: any) {
           onChange={props.onChangePass}
           placeholder="type your password here"
           required
+
         />
+
       </FormControl>
       </Grid>
 
@@ -45,7 +46,23 @@ export default function NewPassFields(props: any) {
           onChange={props.onChangeRepeatPass}
           placeholder="confirm your password"
           required
+          ref={anchorElRef}
         />
+        <Popover
+          open={props.popupState}
+          onClose={()=>{props.onPopupChange(false)}}
+          anchorEl={anchorElRef.current}
+          anchorOrigin={{
+            vertical :'bottom',
+            horizontal:'center',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+          }}
+        >
+          Sorry! Your password must contain at least 8 characters, one letter, one number and also cannot contain symbols
+        </Popover>
       </FormControl>
       </Grid>
     </>

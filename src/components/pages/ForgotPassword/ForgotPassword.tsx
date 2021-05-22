@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {BaseSyntheticEvent, useState} from "react";
 import styles from "./ForgotPassword.module.css"; // need to install "npm i react-css-modules"
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography"
@@ -11,7 +11,44 @@ export default function ForgotPassword() {
   console.log("forgot password component ready!");
   const [page, setPage] = useState("firstPage"); //number of current step page
   const [pageNum, setPageNum] = useState(1);
-  const [inputElement, setInputElement] = useState(<EmailField />);
+  // const [inputElement, setInputElement] = useState(<EmailField />);
+
+
+  // create states which we changes in child components
+  const [email,setEmail] = useState<string>("");
+  const [resetCode,setResetCode] = useState<string>("");
+  const [password,setPassword] = useState("");
+  const [repeatPassword,setRepeatPassword] = useState("");
+
+  // handlers for change states in child components
+  const handleEmail = (e: React.BaseSyntheticEvent) => {
+    setEmail(e.target.value);
+  };
+  const handleResetCode = (e: React.BaseSyntheticEvent) => {
+    setResetCode(e.target.value);
+  };
+  const handlePassword = (e: React.BaseSyntheticEvent) => {
+    setPassword(e.target.value);
+  };
+  const handleRepeatPassword = (e: BaseSyntheticEvent) => {
+    setRepeatPassword(e.target.value);
+  };
+
+
+  let inputElement;
+  if (page === "firstPage") {
+    inputElement = <EmailField email={email} onChange={handleEmail}/>
+  } else if (page === "secondPage") {
+    inputElement = <ResetCodeField resetCode={resetCode} onChange={handleResetCode}/>
+  } else if (page === "thirdPage") {
+    inputElement =
+      <NewPassFields
+        password={password}
+        onChangePass={handlePassword}
+        repeatPassword={repeatPassword}
+        onChangeRepeatPass={handleRepeatPassword}
+      />
+  }
 
 
   const handleSubmit = (event: any) => {
@@ -20,12 +57,12 @@ export default function ForgotPassword() {
 
     //changing content when form submitted successfully
     if (page === "firstPage"){
-      setInputElement(<ResetCodeField />);
+      // setInputElement(<ResetCodeField />);
       setPage("secondPage");
       setPageNum(2);
       console.log("secondPage showing")
     } else if (page === "secondPage") {
-      setInputElement(<NewPassFields />);
+      // setInputElement(<NewPassFields />);
       setPage("thirdPage");
       setPageNum(3);
       console.log("thirdPage showing")

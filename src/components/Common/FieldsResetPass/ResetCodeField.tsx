@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {FormControl, Input, InputLabel} from "@material-ui/core";
 
-export default function ResetCodeField() {
-  const [resetCode,setResetCode] = useState("");
+export default function ResetCodeField(props:any) {
+
 
   return (
     <>
@@ -11,12 +11,12 @@ export default function ResetCodeField() {
         <Input
           type="text"
           id="resetCodeInput"
-          value={resetCode}
+          value={props.resetCode}
           inputProps={{
             minLength: 6,
             maxLength: 6,
           }}
-          onChange={(e)=>{setResetCode(e.target.value)}}
+          onChange={props.onChange}
           placeholder="Type your reset code here"
           required
         />

@@ -1,8 +1,11 @@
 import React, {useState} from "react";
 import {FormControl, Input, InputLabel} from "@material-ui/core";
 
-export default function EmailField() {
-  const [email,setEmail] = useState("");
+export default function EmailField(props: any) {
+
+  // function handleChange(e: any) {
+  //   props.onChange(e.target.value);
+  // }
 
   return (
     <>
@@ -11,8 +14,8 @@ export default function EmailField() {
         <Input
           type="email"
           id="emailInput"
-          value={email}
-          onChange={(e)=>{setEmail(e.target.value); console.log(e.target.value);}}
+          value={props.email}
+          onChange={props.onChange}
           placeholder="type your email here"
           required
         />

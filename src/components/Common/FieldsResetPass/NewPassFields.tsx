@@ -3,13 +3,12 @@ import {FormControl, Input, InputLabel} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 
 
-export default function NewPassFields() {
-  const [password,setPassword] = useState("");
-  const [repeatPassword,setRepeatPassword] = useState("");
+export default function NewPassFields(props: any) {
 
-  if (password != repeatPassword) {
-    console.log("Password mismatch: " + password + " / " + repeatPassword)
-  }
+
+  // if (password != repeatPassword) {
+  //   console.log("Password mismatch: " + password + " / " + repeatPassword)
+  // }
 
   return (
     <>
@@ -19,12 +18,12 @@ export default function NewPassFields() {
         <Input
           type="password"
           id="passwordInput"
-          value={password}
+          value={props.password}
           inputProps={{
             minLength: 8,
             maxLength: 30,
           }}
-          onChange={(e)=>{setPassword(e.target.value)}}
+          onChange={props.onChangePass}
           placeholder="type your password here"
           required
         />
@@ -38,12 +37,12 @@ export default function NewPassFields() {
         <Input
           type="password"
           id="repeatPasswordInput"
-          value={repeatPassword}
+          value={props.repeatPassword}
           inputProps={{
             minLength: 8,
             maxLength: 30,
           }}
-          onChange={(e)=>{setRepeatPassword(e.target.value)}}
+          onChange={props.onChangeRepeatPass}
           placeholder="confirm your password"
           required
         />

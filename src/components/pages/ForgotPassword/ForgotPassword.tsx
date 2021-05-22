@@ -67,6 +67,12 @@ export default function ForgotPassword() {
       setPageNum(3);
       console.log("thirdPage showing")
     } else if (page === "thirdPage") {
+      if (password !== repeatPassword) {
+        alert("passwords isn't same");
+        setPassword("");
+        setRepeatPassword("");
+        return
+      }
       window.location.reload()
     }
   };

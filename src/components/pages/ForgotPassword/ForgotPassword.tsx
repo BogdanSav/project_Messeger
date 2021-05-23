@@ -9,16 +9,22 @@ import useForgotPasswordData from "./useForgotPasswordData";
 import {EmailField, ResetCodeField, NewPassFields} from "../../index";
 
 export default function ForgotPassword() {
-  console.log("forgot password component ready!");
-  const [pageNum,handlePageNum,email,handleEmail,resetCode,handleResetCode,password,handlePassword,
-    repeatPassword,handleRepeatPassword,onSubmit,popupState,setPopupState]: any = useForgotPasswordData();
+  const [pageNum,handlePageNum,email,handleEmail,resetCode,handleResetCode,password,
+    handlePassword,repeatPassword,handleRepeatPassword,onSubmit,popupResetCode,setPopupResetCode,
+    popupPassState,setPopupPassState,popupPassMismatch,setPopupPassMismatch]: any = useForgotPasswordData();
 
   //changing component with input which showing right now
   let inputElement;
   if (pageNum === 1) {
     inputElement = <EmailField email={email} onChange={handleEmail}/>
   } else if (pageNum === 2) {
-    inputElement = <ResetCodeField resetCode={resetCode} onChange={handleResetCode}/>
+    inputElement =
+      <ResetCodeField
+        resetCode={resetCode}
+        onChange={handleResetCode}
+        popupResetCode={popupResetCode}
+        onPopupResetCode={setPopupResetCode}
+      />
   } else if (pageNum === 3) {
     inputElement =
       <NewPassFields
@@ -26,9 +32,20 @@ export default function ForgotPassword() {
         onChangePass={handlePassword}
         repeatPassword={repeatPassword}
         onChangeRepeatPass={handleRepeatPassword}
-        popupState={popupState}
-        onPopupChange={setPopupState}
+        popupPassState={popupPassState}
+        onPopupChange={setPopupPassState}
+        popupPassMismatch={popupPassMismatch}
+        onPopupPassMismatch={setPopupPassMismatch}
       />
+  } else if (pageNum === 4) {
+    inputElement = (
+      <>
+        <br/>
+        <Typography variant="subtitle1" align="center">
+          Password change request was successfully sent. You will be redirected to the "Sign In" page in a few seconds
+        </Typography>
+      </>
+    )
   }
 
   return (

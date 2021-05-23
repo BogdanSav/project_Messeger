@@ -9,7 +9,10 @@ const useForgotPasswordData =()=>{
   const [password,setPassword] = useState<string>("");
   const [repeatPassword,setRepeatPassword] = useState<string>("");
 
-  const [popupState,setPopupState] = useState<boolean>(false);
+  const [popupResetCode, setPopupResetCode] = useState<boolean>(false);
+  const [popupPassState,setPopupPassState] = useState<boolean>(false);
+  const [popupPassMismatch, setPopupPassMismatch] = useState<boolean>(false);
+  const resetCodeRule = /^(?=.*[A-Za-z\d])[A-Za-z\d]{6,}$/; //line must contain only letters and numbers
   const passwordRule = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
   const onSubmit=(e:BaseSyntheticEvent)=>{
@@ -18,20 +21,35 @@ const useForgotPasswordData =()=>{
     //changing content when form submitted successfully
     if (pageNum === 1){
       setPageNum(2);
-    } else if (pageNum === 2) {
-      setPageNum(3);
-    } else if (pageNum === 3) {
-      if (passwordRule.test(password) && passwordRule.test(repeatPassword)){
-        setPassword("");
-        setRepeatPassword("");
-        console.log("password was validated")
+    }
+    else if (pageNum === 2) {
+      if (resetCodeRule.test(resetCode)) {
+        setPageNum(3);
       }
       else {
-        setPopupState(true);
-        console.log("password was not validated");
+        setPopupResetCode(true);
         return;
       }
-      window.location.reload()
+    }
+    else if (pageNum === 3) {
+      if (passwordRule.test(password) && passwordRule.test(repeatPassword)){
+        if (password === repeatPassword) {
+          setPageNum(4);
+          setTimeout(()=> {
+            window.location.replace("/signin");
+          }, 5500);
+        }
+        else if (password !== repeatPassword) {
+          setPopupPassMismatch(true);
+          // setPassword("");
+          // setRepeatPassword("");
+          return;
+        }
+      }
+      else {
+        setPopupPassState(true);
+        return;
+      }
     }
   };
 
@@ -51,7 +69,8 @@ const useForgotPasswordData =()=>{
   const handleRepeatPassword = useCallback((e: BaseSyntheticEvent) => {
     setRepeatPassword(e.target.value);
   },[]);
-  return [pageNum, handlePageNum, email,handleEmail,resetCode,handleResetCode,password,
-    handlePassword,repeatPassword,handleRepeatPassword,onSubmit,popupState,setPopupState];
+  return [pageNum,handlePageNum,email,handleEmail,resetCode,handleResetCode,password,
+    handlePassword,repeatPassword,handleRepeatPassword,onSubmit,popupResetCode,setPopupResetCode,
+    popupPassState,setPopupPassState,popupPassMismatch,setPopupPassMismatch];
 };
 export default useForgotPasswordData;

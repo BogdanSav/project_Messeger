@@ -4,10 +4,8 @@ import Grid from "@material-ui/core/Grid";
 
 
 export default function NewPassFields(props: any) {
-  const anchorElRef = useRef<HTMLBaseElement>();
-  // if (props.password !== props.repeatPassword) {
-  //   console.log("Password mismatch: " + props.password + " / " + props.repeatPassword)
-  // }
+  const anchorPassRef = useRef<HTMLBaseElement>();
+  const anchorPassMismatch = useRef<HTMLBaseElement>();
 
   return (
     <>
@@ -25,9 +23,23 @@ export default function NewPassFields(props: any) {
           onChange={props.onChangePass}
           placeholder="type your password here"
           required
-
+          ref={anchorPassRef}
         />
-
+        <Popover
+          open={props.popupPassState}
+          onClose={()=>{props.onPopupChange(false)}}
+          anchorEl={anchorPassRef.current}
+          anchorOrigin={{
+            vertical :'bottom',
+            horizontal:'center',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+          }}
+        >
+          Sorry! Your password must contain at least 8 characters, one letter, one number and also cannot contain symbols
+        </Popover>
       </FormControl>
       </Grid>
 
@@ -46,12 +58,12 @@ export default function NewPassFields(props: any) {
           onChange={props.onChangeRepeatPass}
           placeholder="confirm your password"
           required
-          ref={anchorElRef}
+          ref={anchorPassMismatch}
         />
         <Popover
-          open={props.popupState}
-          onClose={()=>{props.onPopupChange(false)}}
-          anchorEl={anchorElRef.current}
+          open={props.popupPassMismatch}
+          onClose={()=>{props.onPopupPassMismatch(false)}}
+          anchorEl={anchorPassMismatch.current}
           anchorOrigin={{
             vertical :'bottom',
             horizontal:'center',
@@ -61,7 +73,7 @@ export default function NewPassFields(props: any) {
             horizontal: 'center',
           }}
         >
-          Sorry! Your password must contain at least 8 characters, one letter, one number and also cannot contain symbols
+          Passwords must match!
         </Popover>
       </FormControl>
       </Grid>

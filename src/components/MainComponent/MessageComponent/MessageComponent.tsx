@@ -1,8 +1,8 @@
 import React from 'react';
-import useSocket from './useSocket';
 import {Box, Typography} from '@material-ui/core';
+import useChatMessage from './useChat';
 function MessageComponent(){
-    const [msg] = useSocket();
+    const [msg] = useChatMessage();
    return (
        <Box>
            <Typography variant="h3">{msg.username}</Typography>

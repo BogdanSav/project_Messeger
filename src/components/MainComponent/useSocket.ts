@@ -1,23 +1,23 @@
-import io from 'socket.io-client';
-import { useState, useEffect } from 'react';
+import socket from '../../utils/socket-io.util'
+import { BaseSyntheticEvent, useCallback, useEffect, useState } from 'react';
+import {useDispatch} from 'react-redux';
+import {JOIN_CHAT, EMIT_MESSAGE, ADD_MESSAGE} from '../../redux/actions/actions';
 
-interface IMessage {
-    username?:string,
-    text?:string,
-    time?:string
-}
-const path: string = 'http://localhost:4000';
-export const socket = io(path);
+
 const useSockets = () => {
-    const [msg, setMsg] = useState<IMessage>({});
+    const dispatch = useDispatch();
+    const[message, typeMessage] = useState('')
     useEffect(() => {
-        socket.emit('joinRoom', { username: 'bogdan', room: 'first' });
-    }, []);
-    socket.on('message', (data) => {
-        setMsg(data);
-    }
-    );
-    return [msg];
+       dispatch({type:JOIN_CHAT});
+    }, [dispatch]);
+    const emitMessage = useCallback(()=>{
+        dispatch({type:ADD_MESSAGE, payload:{message}})
+    },[dispatch,message]);
+    const changeTextMessage = useCallback((e: BaseSyntheticEvent)=>{
+        typeMessage(e.target.value);
+    },[])
+    return {message, changeTextMessage, emitMessage}
+    
 }
 
 export default useSockets;

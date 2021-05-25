@@ -1,12 +1,19 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import MessageComponent from './MessageComponent';
 import useChatMessage from './useChat';
+import { useSelector } from 'react-redux';
+import {RootState} from '../../../redux/reducers/rootReducer';
 function MessageContainer() {
+    const loadedMessages = useSelector<RootState>(state=>state.msg.allMessages);
+    const [messages, setMessages] = useState<any>([]);
+    useEffect(()=>{
+        setMessages(loadedMessages);
+    },[loadedMessages]);
  
     return (    
-            <Fragment>
-                Component here
-            </Fragment>
+          messages.map((data:any)=>(
+            <MessageComponent username={data.username} msg={data.text}/>
+          ))  
     
     );
 }

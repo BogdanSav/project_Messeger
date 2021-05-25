@@ -1,14 +1,14 @@
 import socket from '../../utils/socket-io.util'
 import { BaseSyntheticEvent, useCallback, useEffect, useState } from 'react';
 import {useDispatch} from 'react-redux';
-import {JOIN_CHAT, EMIT_MESSAGE, ADD_MESSAGE} from '../../redux/actions/actions';
+import {ADD_MESSAGE,JOIN_CHAT} from '../../redux/actions/actions';
 
 
 const useSockets = () => {
     const dispatch = useDispatch();
     const[message, typeMessage] = useState('')
     useEffect(() => {
-       dispatch({type:JOIN_CHAT});
+       dispatch({type: JOIN_CHAT});
     }, [dispatch]);
     const emitMessage = useCallback(()=>{
         dispatch({type:ADD_MESSAGE, payload:{message}})

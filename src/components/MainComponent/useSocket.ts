@@ -1,4 +1,3 @@
-import socket from '../../utils/socket-io.util'
 import { BaseSyntheticEvent, useCallback, useEffect, useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {ADD_MESSAGE,JOIN_CHAT} from '../../redux/actions/actions';
@@ -12,6 +11,7 @@ const useSockets = () => {
     }, [dispatch]);
     const emitMessage = useCallback(()=>{
         dispatch({type:ADD_MESSAGE, payload:{message}})
+        typeMessage("");
     },[dispatch,message]);
     const changeTextMessage = useCallback((e: BaseSyntheticEvent)=>{
         typeMessage(e.target.value);

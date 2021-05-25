@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Box, Typography} from '@material-ui/core';
-import useChatMessage from './useChat';
-import { useSelector } from 'react-redux';
-import {RootState} from '../../../redux/reducers/rootReducer';
+// import useChatMessage from './useChat';
+
 function MessageComponent({username, msg} :any){
     // const [msg] = useChatMessage();
-    const arr = useSelector<RootState>(state=>state.msg);
     
    return (
        <Box>

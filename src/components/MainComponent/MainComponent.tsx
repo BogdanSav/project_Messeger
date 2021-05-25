@@ -1,6 +1,6 @@
 import { Button, Container, TextField, Typography } from '@material-ui/core';
 import React, { BaseSyntheticEvent } from 'react';
-import MessageComponent from './MessageComponent/MessageComponent';
+// import MessageComponent from './MessageComponent/MessageComponent';
 import MessageContainer from './MessageComponent/MessageContainer';
 import useSocket from './useSocket';
 

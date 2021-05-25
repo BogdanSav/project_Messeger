@@ -16,7 +16,7 @@ const messagesReducer = (state = initialState, action:{type:string ,payload:any}
              return {...state, lastMessage: action.payload.message}
         case GET_MESSAGE:
             console.log(state.allMessages);
-             return {...state,allMessages: state.allMessages.concat([action.payload.data])}    
+             return {...state,allMessages: state.allMessages.concat([action.payload.msg])}    
         default: return state;
     }
 }

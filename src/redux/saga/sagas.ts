@@ -1,7 +1,6 @@
-import { select, take, takeEvery, takeLeading, put, call } from "redux-saga/effects";
-import { ADD_MESSAGE, EMIT_MESSAGE, JOIN_CHAT, LOGIN, SIGNUP_ACTION, GET_MESSAGE } from "../actions/actions";
+import { select, takeEvery, takeLeading } from "redux-saga/effects";
+import { ADD_MESSAGE, JOIN_CHAT, LOGIN, SIGNUP_ACTION } from "../actions/actions";
 import socket from '../../utils/socket-io.util';
-import { StringDecoder } from "node:string_decoder";
 
 const urlSignup: string = "/signup";
 const urlSignin: string = "/signin";
@@ -17,27 +16,13 @@ export function* sagaWatcher() {
     yield takeLeading(LOGIN, signIn);
     yield takeEvery(ADD_MESSAGE, emitChatMessage);
     yield takeEvery(JOIN_CHAT, joinChatRoom)
+}
 
-}
-async function getMessages() {
-    let response = new Promise<object>((res,rej)=>{
-        socket.on('message', (data)=>{
-           console.log(data);
-           res(data);
-       })
-   });
-     const msg = await response;
-     return msg;
-}
+
 function* emitChatMessage() {
     const msg: string = yield select(state => state.msg.lastMessage);
-    
     yield console.log(msg)
-    yield socket.emit('chatMessage', msg);
-    const data:object = yield call(getMessages);
-    yield put({type:GET_MESSAGE,payload:{data}})
-    
-    
+    yield socket.emit('chatMessage', msg); 
 }
 function* joinChatRoom() {
     const username = "Bogdan";

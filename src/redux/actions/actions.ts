@@ -7,4 +7,5 @@ export const UPDATE_MESSAGES: string = 'UPDATE_MESSAGES';
 export const EMIT_MESSAGE: string = 'EMIT_MESSAGE';
 export const ADD_MESSAGE: string = 'ADD_MESSAGE';
 export const GET_MESSAGE: string = 'GET_MESSAGE';
+export const ADD_NEW_CHAT: string = 'ADD_NEW_CHAT';
 

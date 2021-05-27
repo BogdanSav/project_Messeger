@@ -1,6 +1,7 @@
 import { BaseSyntheticEvent, useCallback, useEffect, useState } from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {ADD_MESSAGE,JOIN_CHAT} from '../../redux/actions/actions';
+// import { RootState } from '../../redux/reducers/rootReducer';
 
 
 const useSockets = () => {

@@ -1,9 +1,11 @@
 import React, { useState, useCallback, BaseSyntheticEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import {LOGIN} from '../../redux/actions/actions'
+import {useHistory} from 'react-router-dom';
 
 const useLoginData = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
@@ -18,6 +20,7 @@ const useLoginData = () => {
         dispatch({type: LOGIN ,payload:{email, password}});
         setEmail('');
         setPassword('');
+        history.push('/main');
     }
     return [email,password,changeEmail,changePassword, onSubmit];
 

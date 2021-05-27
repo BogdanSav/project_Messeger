@@ -25,8 +25,9 @@ function* emitChatMessage() {
     yield socket.emit('chatMessage', msg); 
 }
 function* joinChatRoom() {
-    const username = "Bogdan";
-    const room = "firstRoom";
+    const username: string = yield select(state=>state.login.email);
+    const room:string = yield select(state=>state.chats.title); 
+    yield console.log(username,room);
     yield socket.emit('joinRoom', { username, room })
 }
 function* signUp() {

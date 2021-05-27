@@ -6,9 +6,9 @@ import {ADD_MESSAGE,JOIN_CHAT} from '../../redux/actions/actions';
 const useSockets = () => {
     const dispatch = useDispatch();
     const[message, typeMessage] = useState('')
-    useEffect(() => {
-       dispatch({type: JOIN_CHAT});
-    }, [dispatch]);
+    // useEffect(() => {
+    //    dispatch({type: JOIN_CHAT});
+    // }, [dispatch]);
     const emitMessage = useCallback(()=>{
         dispatch({type:ADD_MESSAGE, payload:{message}})
         typeMessage("");

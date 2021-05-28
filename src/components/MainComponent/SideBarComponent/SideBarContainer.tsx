@@ -1,6 +1,6 @@
 import React, { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { Button, Grid, Input } from '@material-ui/core';
-// import './SideBarContainer.scss';
+import {v4 as uuid4} from 'uuid';
 import useChatInfo from './useChatInfo';
 import ChatCard from './ChatCard';
 import { useSelector } from 'react-redux';
@@ -8,10 +8,11 @@ import { RootState } from '../../../redux/reducers/rootReducer';
 
 function SidebarContainer() {
     const [name,setName,addChat] = useChatInfo();
-    const chatInfo = useSelector<RootState>(state => state.chats);
+    const chatInfo:any = useSelector<RootState>(state => state.chats);
     const [state, setState] = useState<any>([]);
+    // console.log(state);
     useEffect(() => {
-        setState(chatInfo);
+        setState(chatInfo.allChats);
     }, [chatInfo]);
     return (
 
@@ -22,7 +23,7 @@ function SidebarContainer() {
             </Grid>
             {
                 state.map((chat: any) => (
-                    <ChatCard title={chat.title} lastMsg={chat.lastMsg} time={chat.time}/>
+                    <ChatCard key={uuid4()} title={chat.title} lastMsg={chat.lastMsg} time={chat.time} id={chat.id}/>
                 ))
             }
         </Grid>

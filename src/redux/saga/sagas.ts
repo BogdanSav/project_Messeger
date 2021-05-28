@@ -15,7 +15,7 @@ export function* sagaWatcher() {
     yield takeLeading(SIGNUP_ACTION, signUp);
     yield takeLeading(LOGIN, signIn);
     yield takeEvery(ADD_MESSAGE, emitChatMessage);
-    yield takeEvery(JOIN_CHAT, joinChatRoom)
+    yield takeEvery(JOIN_CHAT, joinChatRoom);
 }
 
 
@@ -25,9 +25,10 @@ function* emitChatMessage() {
     yield socket.emit('chatMessage', msg); 
 }
 function* joinChatRoom() {
+   
     const username: string = yield select(state=>state.login.email);
-    const room:string = yield select(state=>state.chats.title); 
-    yield console.log(username,room);
+    const room:string = yield select(state=>state.chats.allChats[state.chats.currentID].title); 
+    // yield console.log(username,room);
     yield socket.emit('joinRoom', { username, room })
 }
 function* signUp() {

@@ -1,4 +1,4 @@
-import { ADD_MESSAGE, GET_MESSAGE } from "../actions/actions";
+import { ADD_MESSAGE, GET_MESSAGE, JOIN_CHAT } from "../actions/actions";
 
 interface IState {
     lastMessage: string,
@@ -16,7 +16,8 @@ const messagesReducer = (state = initialState, action:{type:string ,payload:any}
              return {...state, lastMessage: action.payload.message}
         case GET_MESSAGE:
             console.log(state.allMessages);
-             return {...state,allMessages: state.allMessages.concat([action.payload.msg])}    
+             return {...state,allMessages: state.allMessages.concat([action.payload.msg])}
+        case JOIN_CHAT: return {...state, allMessages:[]}         
         default: return state;
     }
 }

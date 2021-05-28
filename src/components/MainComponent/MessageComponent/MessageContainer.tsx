@@ -1,17 +1,16 @@
 import { Box } from '@material-ui/core';
-import React, {useEffect, useState } from 'react';
+import React from 'react';
 import MessageComponent from './MessageComponent';
 import useChatMessage from './useChat';
-// import { useSelector } from 'react-redux';
+import {v4 as uuid4} from 'uuid';
 
 function MessageContainer() {
     const [messages] = useChatMessage();
     return (
         messages.length ===0 ? <Box>Nothing to see yet</Box> :
         messages.map((data: any) => (
-            <MessageComponent username={data.username} msg={data.text} />
+            <MessageComponent key={uuid4()} username={data.username} msg={data.text} />
         ))
-        
     );
 }
 

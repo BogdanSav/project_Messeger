@@ -19,14 +19,6 @@ function ChatCard({ title, lastMsg, time, id }: IProps) {
         <Grid item>
             <Box onClick={setChat}>
                 <Typography variant="h4" style={state ? {color:"red"}:{color:"black"}}>{title}</Typography>
-                <Grid container direction="row">
-                    <Grid item>
-                        <Typography variant="body2">{lastMsg}</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography variant="body1">{time}</Typography>
-                    </Grid>
-                </Grid>
             </Box>
         </Grid>
     );

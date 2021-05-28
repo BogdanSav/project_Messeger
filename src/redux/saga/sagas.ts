@@ -26,7 +26,7 @@ function* emitChatMessage() {
 }
 function* joinChatRoom() {
    
-    const username: string = yield select(state=>state.login.email);
+    const username: string = yield window.sessionStorage.getItem("email"); //select(state=>state.login.email);
     const room:string = yield select(state=>state.chats.allChats[state.chats.currentID].title); 
     // yield console.log(username,room);
     yield socket.emit('joinRoom', { username, room })
@@ -52,7 +52,8 @@ function* signUp() {
     }
 }
 function* signIn() {
-    const data: object = yield select(state => state.login);
+    const data: {email:string, password:string} = yield select(state => state.login);
+    window.sessionStorage.setItem("email" ,data.email);
     try {
         const response: PromiseFulfilledResult<any> = yield fetch(urlSignin, {
             method: "POST",

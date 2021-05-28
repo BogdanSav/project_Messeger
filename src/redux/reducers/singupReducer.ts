@@ -4,7 +4,6 @@ interface IAction {
     type: string,
     payload: any,
 }
-
 const initialState = {};
 
 function singupReducer(state = initialState, action: IAction) {

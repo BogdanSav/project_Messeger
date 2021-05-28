@@ -1,6 +1,6 @@
 import { BaseSyntheticEvent, useCallback, useState } from 'react';
 import {useDispatch} from 'react-redux';
-import {ADD_MESSAGE} from '../../redux/actions/actions';
+import {ADD_MESSAGE} from '../../../redux/actions/actions';
 // import { RootState } from '../../redux/reducers/rootReducer';
 
 

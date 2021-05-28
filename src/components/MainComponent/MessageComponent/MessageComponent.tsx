@@ -1,11 +1,11 @@
 import React from 'react';
 import {Box, Typography} from '@material-ui/core';
 
-function MessageComponent ({username, msg} :any){
+function MessageComponent ({username, msg, time} :any){
    return (
        <Box>
-           <Typography variant="h3">{username}</Typography>
-           <Typography variant="body1">{msg}</Typography>
+           <Typography variant="body1"><b>{`${username} ${time}`}</b></Typography>
+           <Typography variant="body2">{msg}</Typography>
        </Box>
    );
 }

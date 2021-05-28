@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Grid, Typography, FormControl, Input, InputLabel, Button} from '@material-ui/core';
 import useLoginData from './useLoginData';
+import './styles.css'
 
 
 
@@ -12,7 +13,7 @@ const AnotherLogin : React.FC = ()=>{
         <form onSubmit={onSubmit}>
             <Grid container direction="column" justify="space-around" alignItems="center"  spacing={4}  >
                 <Grid item>
-                    <Typography variant="h3"> Login into existing account</Typography>
+                    <Typography variant="h3"> Log into existing account</Typography>
                 </Grid>
                 <Grid item>
                     <FormControl>
@@ -27,7 +28,7 @@ const AnotherLogin : React.FC = ()=>{
                     </FormControl>
                 </Grid>
                 <Grid item>
-                    <Button type="submit" variant={"outlined"} color={"default"}>Register</Button>
+                    <Button type="submit" variant={"outlined"} color={"default"}>Sign in</Button>
                 </Grid>
             </Grid>
         </form>

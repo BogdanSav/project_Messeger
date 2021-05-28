@@ -1,0 +1,6 @@
+form {
+    margin-top: 30vh;
+    background: linear-gradient(45deg,transparent,blueviolet);
+    border: 13px outset blueviolet;
+    padding: 30px;
+}

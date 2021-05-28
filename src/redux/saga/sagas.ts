@@ -16,7 +16,6 @@ export function* sagaWatcher() {
     yield takeLeading(LOGIN, signIn);
     yield takeEvery(ADD_MESSAGE, emitChatMessage);
     yield takeEvery(JOIN_CHAT, joinChatRoom);
-    
 }
 
 
